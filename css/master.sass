@@ -35,15 +35,27 @@ a
 	display: inline-block
 	position: relative
 
+img
+  max-width: 100%
+  border: 0
+  margin: auto
+  display: block
+  -webkit-transition: all 0.7s ease-out
+  -moz-transition: all 0.7s ease-out
+  -o-transition: all 0.7s ease-out
+  transition: all 0.7s ease-out
+
 header
   +size(100%,120px)
   width: 100%
   height: 120px
   display: block
-  background-color: #fff
+  // background-color: #fff
   position: fixed
   top: 0 
   z-index: 1000
+h1 
+  font-size: 450%
 
 h2
   font-size: 225%
@@ -55,18 +67,31 @@ h3
   color: #29354C
   margin-bottom: 8px
 
+h4 
+	font-size: 110%
+
+h5 
+	font-size: 130%
+
+h6 
+	font-size: 115%
+
+h4, h5 
+	margin-bottom: 20px
+	
 
 /* function css */
 
-.button
+.btn
   cursor: pointer
   text-align: center
-  width: 64px
+  max-width: 280px
   height: 22px
-  font-family: PingFangTC
+  margin: auto
   font-size: 16px
-  font-weight: 500
   color: #29354c
+  font-weight: 700
+  padding: 9px 0
   border-radius: 4px
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15), 0 2px 4px 0 rgba(0, 0, 0, 0.05)
   &:hover
@@ -115,32 +140,122 @@ h3
   text-align: right
 
 .small 
-  font-size: 80%
+  font-size: 90%
+
+.thin
+  font-weight: 200
 
 .bold
   font-weight: bold
 
 .bg-info
   +Bgc(#fee704)
-
+.bg-dBlue
+  +Bgc(#29354c)
 .mx_1000
   max-width: 1000px
   margin: auto
 
+.logo
+  background: url(../img/logo.png) no-repeat center
+  width: 166px
+  height: 100%
+  display: block
+  text-indent: -999999999999px
+
+.container
+  padding-top: 60px
+  .section-title 
+    margin-bottom: 120px
+    h3
+      margin-bottom: 20px
+      
+.signUp-container
+  height: 215px
+  border-radius: 12px
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 20px 30px 0 rgba(0, 0, 0, 0.05)
 /* main css */
 
+/* drawer css */
+.drawer
+  h1
+    padding-top: 41px
+    margin-bottom: 14px
+   
 /* banner css */
 .banner-container
   position: relative
   .banner
+  .banner-title
+    @extend %setCenter
+    h3 
+      margin-bottom: 40px
   .cover 
     background-color: rgba(0, 0, 0, 0.45)
 
+/* provide=section css */  
+.provide-section
+  .provide-box
+    margin-bottom: 100px
+    &:first-of-type
+      margin-top: 100px
+    &:nth-of-type(even)
+      .provide_img
+        img
+          margin-right: 0
+    &:nth-of-type(odd)
+      .provide_img
+        img
+          margin-left: 0
+  .provide_content
+    width: 50%
+    display: inline-block
+    vertical-align: middle
+  .provide_img
+    width: 49%
+    display: inline-block
+    vertical-align: middle
+  
+    
+
+/* date_main css */
+.date_main 
+  text-align: center
+  margin-bottom: 24px
+  ul.time_list
+    width: calc(100% / 2 - 120px)
+    display: inline-block
+    margin-right: 64px
+    &:last-of-type
+      margin-right: 0
+    li 
+      padding: 10px 0
+      border-bottom: solid 1px #d4d6d9
+    i 
+      position: relative
+      font-style: normal
+      margin-right: 16px
+      &::after
+        content: ''
+        +size(2px,100%)
+        +Bgc($c2)
+        position: absolute
+        top: 0 
+        right: -6px
+
+
+
 /* footer css */
 #footer
+  padding-top: 60px
+  padding-bottom: 100px
+  .logo 
+    padding-top: 60px
+    margin-bottom: 16px
   ul.footer-info
     li
+      vertical-align: top
       display: inline-block
-      margin-right: 20px
+      margin-right: 35px
 
  
