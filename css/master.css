@@ -70,6 +70,12 @@ header {
   z-index: 1000;
 }
 
+header.boxshow {
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 15px #c4c4c485;
+          box-shadow: 3px 3px 15px #c4c4c485;
+}
+
 h1 {
   font-size: 450%;
 }
@@ -205,6 +211,7 @@ h4, h5 {
 .mx_1000 {
   max-width: 1000px;
   margin: auto;
+  padding: 0 10px;
 }
 
 .logo {
@@ -239,6 +246,17 @@ h4, h5 {
 .drawer h1 {
   padding-top: 41px;
   margin-bottom: 14px;
+  width: 166px;
+  height: 37px;
+  font-size: 100%;
+}
+
+.drawer .drawer-menu-item {
+  color: #fff;
+}
+
+.drawer .boxshow .drawer-menu-item {
+  color: #222;
 }
 
 /* banner css */

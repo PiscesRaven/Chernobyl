@@ -50,10 +50,14 @@ header
   width: 100%
   height: 120px
   display: block
-  // background-color: #fff
   position: fixed
   top: 0 
   z-index: 1000
+  &.boxshow
+    background-color: #fff
+    box-shadow: 3px 3px 15px #c4c4c485
+  
+
 h1 
   font-size: 450%
 
@@ -150,11 +154,14 @@ h4, h5
 
 .bg-info
   +Bgc(#fee704)
+
 .bg-dBlue
   +Bgc(#29354c)
+
 .mx_1000
   max-width: 1000px
   margin: auto
+  padding: 0 10px
 
 .logo
   background: url(../img/logo.png) no-repeat center
@@ -181,7 +188,14 @@ h4, h5
   h1
     padding-top: 41px
     margin-bottom: 14px
-   
+    width: 166px
+    height: 37px
+    font-size: 100%
+  .drawer-menu-item
+    color: #fff
+  .boxshow
+    .drawer-menu-item
+      color: #222
 /* banner css */
 .banner-container
   position: relative
