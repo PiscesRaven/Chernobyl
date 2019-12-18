@@ -11,8 +11,13 @@ $(window).scroll(function () {
 });
 $('.drawer').drawer();
 
+function DOM(e) {
+  var result = document.querySelectorAll(e);
+  return result;
+}
 
 function openNtc(e, fetchDom) {
+  console.log(fetchDom)
   $(e).toggleClass("active");
   $(DOM(fetchDom)).slideToggle();
 }
