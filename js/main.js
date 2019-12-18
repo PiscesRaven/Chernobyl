@@ -10,3 +10,9 @@ $(window).scroll(function () {
   }
 });
 $('.drawer').drawer();
+
+
+function openNtc(e, fetchDom) {
+  $(e).toggleClass("active");
+  $(DOM(fetchDom)).slideToggle();
+}

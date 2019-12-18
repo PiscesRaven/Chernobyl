@@ -98,3 +98,12 @@ $tableLineColor: #e6dedb
   overflow: hidden
   text-overflow: ellipsis
   white-space: nowrap
+
+//平板
+@mixin pad-width()
+  @media (max-width: 768px) 
+    @content
+  
+@mixin phone-width()
+  @media (max-width: 575px) 
+    @content
