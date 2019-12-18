@@ -178,9 +178,23 @@ h4, h5
       margin-bottom: 20px
       
 .signUp-container
-  height: 215px
+  padding: 60px
   border-radius: 12px
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 20px 30px 0 rgba(0, 0, 0, 0.05)
+  white-space: nowrap
+  .signUp-content, .btn-group
+    display: inline-block
+    vertical-align: top
+    white-space: normal
+  .signUp-content
+    width: 63%
+    padding-right: 7%
+  .btn-group
+    width: 30%
+    .btn
+      &:first-of-type
+        margin-bottom: 16px
+
 /* main css */
 
 /* drawer css */
@@ -207,7 +221,7 @@ h4, h5
   .cover 
     background-color: rgba(0, 0, 0, 0.45)
 
-/* provide=section css */  
+/* provide-section css */  
 .provide-section
   .provide-box
     margin-bottom: 100px
@@ -229,7 +243,10 @@ h4, h5
     width: 49%
     display: inline-block
     vertical-align: middle
-  
+
+.vendor-content
+  img
+    display: inline-block
     
 
 /* date_main css */
@@ -256,8 +273,6 @@ h4, h5
         position: absolute
         top: 0 
         right: -6px
-
-
 
 /* footer css */
 #footer
