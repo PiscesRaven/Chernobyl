@@ -179,7 +179,7 @@ h4, h5 {
 }
 
 .btn-info {
-  background-color: #fee704;
+  background-color: #fed602;
 }
 
 .btn-info.disabled {
@@ -468,26 +468,26 @@ h4, h5 {
 }
 
 /* main css */
-.top-class-section {
-  padding-top: 120px;
+.main {
   position: relative;
+  padding-top: 120px;
 }
 
-.top-class-section:before {
+@media (max-width: 575px) {
+  .main {
+    padding-top: 40px;
+  }
+}
+
+.main:before {
   content: '';
   background-color: #f5f5f5;
   position: absolute;
   top: 0;
   left: 0;
-  bottom: 15%;
   right: 0;
+  bottom: 0;
   z-index: -2;
-}
-
-@media (max-width: 575px) {
-  .top-class-section {
-    padding-top: 40px;
-  }
 }
 
 .top-class-section .afterBg:after {
@@ -830,6 +830,7 @@ header.boxshow {
 @media (max-width: 575px) {
   .provide-section .provide_content .title {
     font-size: 20px;
+    margin-bottom: 15px;
   }
 }
 
