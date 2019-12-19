@@ -907,7 +907,6 @@ header.boxshow {
 
 @media (max-width: 768px) {
   #footer ul > div {
-    display: none;
     padding: 10px 0;
   }
 }

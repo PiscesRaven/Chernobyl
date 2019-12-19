@@ -11,13 +11,10 @@ $(window).scroll(function () {
 });
 $('.drawer').drawer();
 
-function DOM(e) {
-  var result = document.querySelectorAll(e);
-  return result;
-}
-
-function openNtc(e, fetchDom) {
-  $(e).toggleClass("active");
-  $(DOM('.bold.openNtc:not('+fetchDom+')')).removeClass('active').siblings($(DOM(fetchDom))).slideUp()
-  $(DOM(fetchDom)).slideToggle();
-}
+$(document).on('click', '.openNtc', e => {
+  e.preventDefault(e)
+  $('.openNtc + ul').children('div').slideUp()
+  if ($(e.target).next('ul').children('div').is(':visible')) return
+  $(e.target).next('ul').children('div').slideDown()
+})
+$('.openNtc + ul > div').slideUp()
