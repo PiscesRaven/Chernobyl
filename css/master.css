@@ -92,8 +92,8 @@ h5 {
 }
 
 h6 {
+  line-height: 1.5;
   font-size: 115%;
-  font-size-line-height: 1.5;
 }
 
 h4, h5 {
@@ -226,7 +226,19 @@ h4, h5 {
 .mx_1000 {
   max-width: 1000px;
   margin: auto;
-  padding: 0 10px;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .mx_1000 {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .mx_1000 {
+    padding: 0 10px;
+  }
 }
 
 .logo {
@@ -875,7 +887,7 @@ header.boxshow {
 #footer ul {
   display: inline-block;
   vertical-align: top;
-  margin-left: 75px;
+  margin-left: 55px;
 }
 
 #footer ul:first-of-type {

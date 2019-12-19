@@ -74,8 +74,8 @@ h5
 	font-size: 130%
 
 h6 
-	font-size: 115%
   line-height: 1.5
+  font-size: 115%
 
 h4, h5 
 	margin-bottom: 20px
@@ -175,7 +175,12 @@ h4, h5
 .mx_1000
   max-width: 1000px
   margin: auto
-  padding: 0 10px
+  padding: 0 40px
+  +pad-width 
+    padding: 0 20px
+  +phone-width 
+    padding: 0 10px
+
 
 .logo
   background: url(../img/logo.png) no-repeat center
@@ -551,7 +556,7 @@ header
   ul
     display: inline-block
     vertical-align: top
-    margin-left: 75px
+    margin-left: 55px
     &:first-of-type
       margin-left: 0
     +pad-width

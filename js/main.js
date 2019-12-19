@@ -17,7 +17,7 @@ function DOM(e) {
 }
 
 function openNtc(e, fetchDom) {
-  $(DOM(".bold.openNtc:not(" + fetchDom + ")")).slideUp()
   $(e).toggleClass("active");
+  $(DOM('.bold.openNtc:not('+fetchDom+')')).removeClass('active').siblings($(DOM(fetchDom))).slideUp()
   $(DOM(fetchDom)).slideToggle();
 }
