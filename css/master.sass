@@ -120,9 +120,6 @@ h4, h5
       left: -16px
       transform: translateY(-50%)
 
-  &:hover 
-    +Bgc(#169b16)
-
 .btn-primary
   border-radius: 4px
   border: solid 1px #000
@@ -191,6 +188,11 @@ h4, h5
     padding: 0 20px
   +phone-width 
     padding: 0 10px
+
+.mx_1920
+  max-width: 1920px
+  margin: auto
+  position: relative
 
 
 .logo
@@ -265,24 +267,34 @@ h4, h5
   border-radius: 12px
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 20px 30px 0 rgba(0, 0, 0, 0.05)
   white-space: nowrap
+  +pc-width
+    padding: 40px 60px
+  +pad-width
+    padding: 40px
   +phone-width
-    padding: 40px 16px
+    padding: 20px
+  
   .signUp-content, .btn-group
     display: inline-block
     vertical-align: top
     white-space: normal
-    +pad-width
+    +pc-width
       display: block
   .signUp-content
     width: 63%
     padding-right: 7%
-    +pad-width
+    +pc-width
       width: 100%
       padding: 0
-      margin-bottom: 32px
+      margin-bottom: 20px
       text-align: center
     +phone-width
       text-align: left
+    p
+      +pc-width
+        text-align: center
+      +phone-width
+        text-align: left
     h3
       +phone-width
         font-size: 16px
@@ -290,7 +302,7 @@ h4, h5
   .btn-group
     width: 30%
     margin: auto
-    +pad-width
+    +pc-width
       width: 100%
     .btn
       &:first-of-type
@@ -302,9 +314,9 @@ h4, h5
   +phone-width
     padding-top: 40px
 .top-class-section
-  &.afterBg
+  .afterBg
     &:after
-      top: 28%
+      top: 33%
       height: 1040px
     +pad-width
       &:after
@@ -313,14 +325,14 @@ h4, h5
 
 /* class_main css */
 .class-section
-  &.beforeBg
+  .beforeBg
     &:before
-      top: -24%
+      top: -30%
       +pad-width
         top: -32%
-  &.afterBg
+  .afterBg
     &:after
-      top: 23%
+      top: 30%
       height: 950px
       transform: rotate(-180deg)
       +pad-width
@@ -343,6 +355,8 @@ h4, h5
         font-size: 48px
         font-weight: 700
         margin-bottom: 20px
+        +pc-width
+          font-size: 5vw
         +phone-width
           font-size: 20px
         &.text-secondary
@@ -445,15 +459,15 @@ header
 
 /* provide-section css */  
 .provide-section
-  &.beforeBg 
+  .beforeBg 
     &:before
-      top: 21%
+      top: 23%
       height: 1024px
       +pad-width
         top: 12%
-  &.afterBg
+  .afterBg
     &:after
-      top: 73.5%
+      top: 76.5%
       height: 1020px
       +pad-width
         top: 66%
@@ -507,7 +521,7 @@ header
   img
     display: inline-block
     width: calc(100% / 6 - 20px)
-    +pad-width
+    +pc-width
       width: calc(100% / 4 - 20px)
     +phone-width
       width: 49%
@@ -578,28 +592,42 @@ header
     margin-bottom: 16px
     +pad-width 
        margin-bottom: 0px
+  .footer-info
+    float: left
+    &.info2
+      text-align: right
+      width: 679px
+      padding-left: 50px
+      +pc-width
+        text-align: left
+        width: 100%
+        padding-left: 0
+      ul
+        width: 24%
+        +pc-width
+          width: 100%
+          border-bottom: 1px solid #000
   ul
     display: inline-block
     vertical-align: top
-    margin-left: 55px
-    &:first-of-type
-      margin-left: 0
     +pad-width
       display: block
       margin-left: 0
-      border-bottom: 1px solid #000
+      
       &:first-of-type
         border-bottom: none
     > div 
-      +pad-width
+      +pc-width
+        display: none
         padding: 10px 0
     li
       h6
-        +pad-width
+        +pc-width
           display: none
+  
   .openNtc
     display: none
-    +pad-width
+    +pc-width
       display: block
       position: relative
       padding: 8px 0

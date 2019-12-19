@@ -18,10 +18,10 @@ $(document).on('click', '.openNtc', e => {
   $(e.target).next('ul').children('div').slideDown()
 })
 
-window.addEventListener('resize', function(event){
-  if(window.innerWidth <= 768 ){
-    $('.openNtc + ul > div').slideUp()
+// window.addEventListener('resize', function(event){
+//   if(window.innerWidth <= 768 ){
+//     $('.openNtc + ul > div').slideUp()
 
-  }
-  // do stuff here
-});
+//   }
+//   // do stuff here
+// });
