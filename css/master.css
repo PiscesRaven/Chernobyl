@@ -590,6 +590,17 @@ header.boxshow {
   position: relative;
 }
 
+@media (max-width: 575px) {
+  .banner-container .banner img {
+    display: none !important;
+  }
+  .banner-container .banner .phone-banner {
+    width: 100%;
+    padding-bottom: 150%;
+    background-color: #282828;
+  }
+}
+
 .banner-container .banner-title {
   white-space: nowrap;
 }
@@ -599,8 +610,20 @@ header.boxshow {
 }
 
 @media (max-width: 575px) {
+  .banner-container .banner-title h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
   .banner-container .banner-title h1 {
-    font-size: 24px;
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .banner-container .banner-title h1 {
+    font-size: 32px;
   }
 }
 

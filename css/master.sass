@@ -390,14 +390,26 @@ header
 .banner-container
   position: relative
   .banner
+    +phone-width
+      img
+        display: none !important
+      .phone-banner
+        width: 100%
+        padding-bottom: 150%
+        background-color: #282828
   .banner-title
     @extend %setCenter
     white-space: nowrap
     h3 
       margin-bottom: 40px
+      +phone-width
+        font-size: 20px
+    +pad-width
+      h1 
+        font-size: 48px
     +phone-width
       h1 
-        font-size: 24px
+        font-size: 32px
   .cover 
     background-color: rgba(0, 0, 0, 0.45)  
 
