@@ -411,22 +411,25 @@ header
     font-size: 100%
     +pad-width
       margin-top: 24px
-  span.sr-only
-    color: transparent
+  .mobile-title
+    position: absolute
+    z-index: 666
+    top: 0
+    left: 1.3rem
+    line-height: 82px
+    width: calc( 100vw - 68px )
+    background-color: #fff
+    opacity: 0
   .drawer-menu-item
     color: #fff
   .boxshow
     .drawer-menu-item
       color: #222
   &.drawer-open
-    span.sr-only
-      color: #222
-      text-align: left
-      width: calc(100vw - 2rem)
-      height: 80px
-      padding-left: 3.5rem
-      line-height: 80px
-      background: #fff
+    .logo 
+      display: none
+    .mobile-title
+      opacity: 1
     .drawer-menu-item
       color: #222
 

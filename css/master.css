@@ -639,8 +639,15 @@ header.boxshow {
   }
 }
 
-.drawer span.sr-only {
-  color: transparent;
+.drawer .mobile-title {
+  position: absolute;
+  z-index: 666;
+  top: 0;
+  left: 1.3rem;
+  line-height: 82px;
+  width: calc( 100vw - 68px);
+  background-color: #fff;
+  opacity: 0;
 }
 
 .drawer .drawer-menu-item {
@@ -651,14 +658,12 @@ header.boxshow {
   color: #222;
 }
 
-.drawer.drawer-open span.sr-only {
-  color: #222;
-  text-align: left;
-  width: calc(100vw - 2rem);
-  height: 80px;
-  padding-left: 3.5rem;
-  line-height: 80px;
-  background: #fff;
+.drawer.drawer-open .logo {
+  display: none;
+}
+
+.drawer.drawer-open .mobile-title {
+  opacity: 1;
 }
 
 .drawer.drawer-open .drawer-menu-item {
