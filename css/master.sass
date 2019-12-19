@@ -311,12 +311,21 @@ h4, h5
 
 /* main css */
 .main
+.top-class-section
   padding-top: 120px
+  position: relative
+  &:before
+    content: ''
+    background-color: #f5f5f5
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 15%
+    right: 0
+    z-index: -2
   +phone-width
     padding-top: 40px
-.top-class-section
-  .mx_1920
-    background-color: #f5f5f5
+  
   .afterBg
     &:after
       top: 33%
