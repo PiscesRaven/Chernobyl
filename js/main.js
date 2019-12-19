@@ -11,17 +11,18 @@ $(window).scroll(function () {
 });
 $('.drawer').drawer();
 
+function DOM(e) {
+  var result = document.querySelectorAll(e);
+  return result;
+}
+
 $(document).on('click', '.openNtc', e => {
   e.preventDefault(e)
+  $(DOM('.openNtc')).removeClass("active")
   $('.openNtc + ul').children('div').slideUp()
   if ($(e.target).next('ul').children('div').is(':visible')) return
   $(e.target).next('ul').children('div').slideDown()
+  $(e.target).toggleClass("active");
+
+
 })
-
-// window.addEventListener('resize', function(event){
-//   if(window.innerWidth <= 768 ){
-//     $('.openNtc + ul > div').slideUp()
-
-//   }
-//   // do stuff here
-// });
