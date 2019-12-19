@@ -386,11 +386,25 @@ header
     font-size: 100%
     +pad-width
       margin-top: 24px
+  span.sr-only
+    color: transparent
   .drawer-menu-item
     color: #fff
   .boxshow
+    // .drawer-menu-item
+    //   color: #222
+  &.drawer-open
+    span.sr-only
+      color: #222
+      text-align: left
+      width: calc(100vw - 2rem)
+      height: 80px
+      padding-left: 3.5rem
+      line-height: 80px
+      background: #fff
     .drawer-menu-item
       color: #222
+
 /* banner css */
 .banner-container
   position: relative

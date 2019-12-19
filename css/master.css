@@ -589,11 +589,25 @@ header.boxshow {
   }
 }
 
+.drawer span.sr-only {
+  color: transparent;
+}
+
 .drawer .drawer-menu-item {
   color: #fff;
 }
 
-.drawer .boxshow .drawer-menu-item {
+.drawer.drawer-open span.sr-only {
+  color: #222;
+  text-align: left;
+  width: calc(100vw - 2rem);
+  height: 80px;
+  padding-left: 3.5rem;
+  line-height: 80px;
+  background: #fff;
+}
+
+.drawer.drawer-open .drawer-menu-item {
   color: #222;
 }
 
