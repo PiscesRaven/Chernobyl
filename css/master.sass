@@ -96,6 +96,10 @@ h4, h5
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15), 0 2px 4px 0 rgba(0, 0, 0, 0.05)
   &:hover
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.15), 0 2px 4px 0 rgba(0, 0, 0, 0.05)
+  &.disabled
+    pointer-events: none
+    box-shadow: none
+
 
 .btn-success
   +Bgc(#00b900)
@@ -126,12 +130,19 @@ h4, h5
   color: #29354c
   &:hover
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)), #f5db52
+  &.disabled
+    color: #c0b47a
 
 .btn-secondary
   +Bgc(#2c41c2)
+  &.disabled
+    color: #7f8ff2
 
 .btn-info
   +Bgc(#fee704)
+  &.disabled
+    color: #c0b47a
+
 
 .text-white 
   color: #fff
@@ -391,8 +402,8 @@ header
   .drawer-menu-item
     color: #fff
   .boxshow
-    // .drawer-menu-item
-    //   color: #222
+    .drawer-menu-item
+      color: #222
   &.drawer-open
     span.sr-only
       color: #222
