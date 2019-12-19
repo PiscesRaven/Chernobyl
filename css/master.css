@@ -252,7 +252,7 @@ h4, h5 {
 
 @media (max-width: 575px) {
   .mx_1000 {
-    padding: 0 10px;
+    padding: 0 15px;
   }
 }
 
@@ -960,6 +960,12 @@ header.boxshow {
 
 .note-section h6 {
   font-size: 20px;
+}
+
+@media (max-width: 575px) {
+  .note-section h6 {
+    font-size: 16px;
+  }
 }
 
 /* footer css */
