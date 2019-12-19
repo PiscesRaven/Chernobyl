@@ -1,10 +1,14 @@
 @import './mixins.sass'
 
+*
+  box-sizing: border-box
+
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td,span 
 	margin: 0
 	padding: 0
 	font-family: 'pingfang TC', 'Microsoft JhengHei', 'Arial Black', 'LiHei Pro'
-  box-sizing: border-box
+
+
   
 body 
   margin: 0
@@ -15,7 +19,6 @@ body
   background-color: #fff
   font-size: 100%
   color: #000
-  overflow-x: hidden
 
 dl, dt, dd, ol, ul, li, input 
 	margin: 0
@@ -50,6 +53,7 @@ img
 
 h1 
   font-size: 450%
+  line-height: 1.25
 
 h2
   font-size: 225%
@@ -57,9 +61,11 @@ h2
 
 h3 
   font-size: 150%
-  letter-spacing: 1px
+  letter-spacing: .5px
+  line-height: 1.5
   color: #29354C
   margin-bottom: 8px
+  font-weight: 400
 
 h4 
 	font-size: 110%
@@ -69,6 +75,7 @@ h5
 
 h6 
 	font-size: 115%
+  line-height: 1.5
 
 h4, h5 
 	margin-bottom: 20px
@@ -76,14 +83,13 @@ h4, h5
 
 /* function css */
 
-.btn
+.btn, a.btn
   cursor: pointer
+  display: block
   text-align: center
   max-width: 280px
-  height: 22px
   margin: auto
-  font-size: 16px
-  color: #29354c
+  font-size: 18px
   font-weight: 700
   padding: 9px 0
   border-radius: 4px
@@ -93,15 +99,33 @@ h4, h5
 
 .btn-success
   +Bgc(#00b900)
+  span 
+    position: relative
+    display: inline-block
+    text-indent: 28px
+    font-weight: 400
+    &:before
+      content: ''
+      +size(40px)
+      background-image: url(../img/LINE@.png)
+      background-repeat: no-repeat
+      background-size: contain
+      background-position: center
+      position: absolute
+      top: 50%
+      left: -16px
+      transform: translateY(-50%)
+
   &:hover 
     +Bgc(#169b16)
 
 .btn-primary
   border-radius: 4px
-  border: solid 1px #d4d6d9
+  border: solid 1px #000
   box-shadow: none
-  &:hover 
-    +Bgc(#e3e3e3)
+  color: #29354c
+  &:hover
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)), #f5db52
 
 .btn-secondary
   +Bgc(#2c41c2)
@@ -161,15 +185,28 @@ h4, h5
   text-indent: -999999999999px
 
 .container
-  padding-top: 120px
-  +pad-width
-    padding-top: 60px
+  padding-bottom: 140px
+  +phone-width
+    padding-bottom: 40px
   .section-title 
-    margin-bottom: 120px
+    color: #29354c
+    margin-bottom: 140px
     +pad-width
       margin-bottom: 60px
+    h1
+      margin-bottom: 20px
+      +pad-width
+        font-size: 48px
+      +phone-width
+        font-size: 20px
+        text-align: left
     h3
       margin-bottom: 20px
+      +pad-width
+        font-size: 20px
+      +phone-width
+        font-size: 14px
+        text-align: left
 
 .beforeBg
   position: relative
@@ -213,7 +250,7 @@ h4, h5
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 20px 30px 0 rgba(0, 0, 0, 0.05)
   white-space: nowrap
   +phone-width
-    padding: 40px
+    padding: 40px 16px
   .signUp-content, .btn-group
     display: inline-block
     vertical-align: top
@@ -228,6 +265,12 @@ h4, h5
       padding: 0
       margin-bottom: 32px
       text-align: center
+    +phone-width
+      text-align: left
+    h3
+      +phone-width
+        font-size: 16px
+        font-weight: 700
   .btn-group
     width: 30%
     margin: auto
@@ -239,11 +282,14 @@ h4, h5
 
 /* main css */
 .main
-  padding-bottom: 100px
+  padding-top: 120px
+  +phone-width
+    padding-top: 40px
 .top-class-section
   &.afterBg
     &:after
-      top: 27%
+      top: 28%
+      height: 1040px
     +pad-width
       &:after
         top: 10%
@@ -253,12 +299,13 @@ h4, h5
 .class-section
   &.beforeBg
     &:before
-      top: -15%
+      top: -24%
       +pad-width
         top: -32%
   &.afterBg
     &:after
       top: 23%
+      height: 950px
       transform: rotate(-180deg)
       +pad-width
         top: 8%
@@ -266,6 +313,8 @@ h4, h5
     .program_box
       white-space: nowrap
       margin-bottom: 100px
+      &:last-of-type
+        margin-bottom: 0px
     .box_content
       display: inline-block
       width: 50%
@@ -273,6 +322,19 @@ h4, h5
       white-space: normal
       +phone-width
         width: 100%
+        margin-bottom: 32px
+      .title 
+        font-size: 48px
+        font-weight: 700
+        margin-bottom: 20px
+        +phone-width
+          font-size: 20px
+        &.text-secondary
+          +phone-width
+            font-size: 36px
+      h6:not(.text-secondary)
+        +phone-width
+          font-size: 14px
       &.card
         +Bgc(#fff)
         max-width: 468px
@@ -282,7 +344,7 @@ h4, h5
           min-height: auto
           padding: 24px
       &.content
-        padding-left: 28px
+        padding-left: 36px
         padding-right: 10px
         +phone-width
           padding: 0
@@ -312,13 +374,13 @@ header
 
 .drawer
   h1
-    padding-top: 41px
+    margin-top: 36px
     margin-bottom: 14px
     width: 166px
     height: 37px
     font-size: 100%
     +pad-width
-      padding-top: 24px
+      margin-top: 24px
   .drawer-menu-item
     color: #fff
   .boxshow
@@ -330,30 +392,37 @@ header
   .banner
   .banner-title
     @extend %setCenter
+    white-space: nowrap
     h3 
       margin-bottom: 40px
     +phone-width
-      h2 
+      h1 
         font-size: 24px
   .cover 
-    background-color: rgba(0, 0, 0, 0.45)
+    background-color: rgba(0, 0, 0, 0.45)  
 
 /* provide-section css */  
 .provide-section
   &.beforeBg 
     &:before
-      top: 25%
+      top: 21%
+      height: 1024px
       +pad-width
         top: 12%
   &.afterBg
     &:after
-      top: 75%
+      top: 73.5%
+      height: 1020px
       +pad-width
         top: 66%
   .provide-box
     margin-bottom: 120px
+    +phone-width
+      margin-bottom: 100px
     &:first-of-type
       margin-top: 120px
+    &:last-of-type
+      margin-bottom: 0px
     &:nth-of-type(even)
       .provide_img
         img
@@ -373,6 +442,17 @@ header
     +phone-width
       display: block
       width: 100%
+    .title
+      font-size: 48px
+      +pad-width
+        font-size: 36px
+      +phone-width
+        font-size: 20px
+    h3
+      +pad-width
+        font-size: 20px
+      +phone-width
+        font-size: 14px
   .provide_img
     width: 49%
     display: inline-block
@@ -384,6 +464,11 @@ header
 .vendor-content
   img
     display: inline-block
+    width: calc(100% / 6 - 20px)
+    +pad-width
+      width: calc(100% / 4 - 20px)
+    +phone-width
+      width: 49%
     
  
 /* date_main css */
@@ -427,6 +512,17 @@ header
   div.text-black
     padding-top: 10px 
 
+/* note-section css */
+.note-section
+  .note-title
+    font-size: 32px
+    line-height: 1.5
+  p 
+    font-size: 16px
+    margin-bottom: 8px
+    font-weight: 400
+  h6 
+    font-size: 20px
 
 /* footer css */
 #footer
@@ -443,10 +539,12 @@ header
   ul
     display: inline-block
     vertical-align: top
-    margin-right: 35px
+    margin-left: 75px
+    &:first-of-type
+      margin-left: 0
     +pad-width
       display: block
-      margin-right: 0
+      margin-left: 0
       border-bottom: 1px solid #000
       &:first-of-type
         border-bottom: none
