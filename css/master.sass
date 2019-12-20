@@ -333,6 +333,22 @@ h4, h5
     +pad-width
       &:after
         top: 10%
+  .embed-video
+    position: relative
+    display: block
+    height: 0
+    padding: 0
+    margin: 20px 0 0
+    overflow: hidden
+    padding-bottom: 56.25%
+    iframe
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100%
+      border: 0
 
 
 /* class_main css */
@@ -456,13 +472,12 @@ header
 .banner-container
   position: relative
   .banner
-    +phone-width
-      img
-        display: none !important
-      .phone-banner
-        width: 100%
-        padding-bottom: 150%
-        background-color: #282828
+    background-image: url(https://www.codingbar.ai/img/win_sh_camp_banner.jpg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    overflow: hidden
+    height: 100vh
   .banner-title
     @extend %setCenter
     white-space: nowrap
