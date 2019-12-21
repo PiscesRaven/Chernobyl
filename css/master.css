@@ -1104,6 +1104,7 @@ header.boxshow {
 
 #footer .footer-info {
   float: left;
+  width: 240px;
 }
 
 #footer .footer-info ul {
@@ -1137,9 +1138,8 @@ header.boxshow {
 }
 
 #footer .footer-info.info2 {
-  text-align: right;
-  width: 679px;
-  padding-left: 50px;
+  width: calc(100% - 240px);
+  float: left;
 }
 
 #footer .footer-info.info2 h6 {
@@ -1156,7 +1156,13 @@ header.boxshow {
 }
 
 #footer .footer-info.info2 ul {
-  width: 24%;
+  width: 25%;
+  float: left;
+  text-align: right;
+}
+
+#footer .footer-info.info2 ul > div {
+  display: inline-block;
 }
 
 @media (max-width: 768px) {
