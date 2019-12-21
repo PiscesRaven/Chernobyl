@@ -114,7 +114,7 @@ h4, h5
       background-position: center
       position: absolute
       top: 50%
-      left: -16px
+      left: -12px
       transform: translateY(-50%)
 
 .btn-primary,a.btn-primary
@@ -303,6 +303,8 @@ h4, h5
   .btn-group
     width: 36%
     margin: auto
+    +pc-width
+      width: 40%
     +pad-width
       width: 100%
     .btn
@@ -664,12 +666,20 @@ header
     margin-bottom: 16px
     +pad-width
       margin-bottom: 10px
+  #pc-info
+    +pad-width
+      display: none!important
+  #mb-info
+    display: none!important
+    +pad-width
+      display: block!important
   .footer-info
     float: left
     width: 240px
     ul
       display: inline-block
       vertical-align: top
+      white-space: nowrap
       +pad-width
         display: block
         margin-left: 0
@@ -686,10 +696,11 @@ header
             display: block
             margin-bottom: 16px
     &.info2
-      width: calc(100% - 240px)
-      float: left
+      width: calc(100% - 275px)
+      float: right
       h6
         margin-bottom: 6px
+        clear: both
       p
       +pad-width
         text-align: left
@@ -699,9 +710,6 @@ header
       ul
         width: 25%
         float: left
-        text-align: right
-        &>div
-          display: inline-block
         li
           h6
             +pad-width

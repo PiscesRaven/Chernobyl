@@ -149,7 +149,7 @@ h4, h5 {
   background-position: center;
   position: absolute;
   top: 50%;
-  left: -16px;
+  left: -12px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -474,6 +474,12 @@ h4, h5 {
 .signUp-container .btn-group {
   width: 36%;
   margin: auto;
+}
+
+@media (max-width: 1024px) {
+  .signUp-container .btn-group {
+    width: 40%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1102,6 +1108,22 @@ header.boxshow {
   }
 }
 
+@media (max-width: 768px) {
+  #footer #pc-info {
+    display: none !important;
+  }
+}
+
+#footer #mb-info {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  #footer #mb-info {
+    display: block !important;
+  }
+}
+
 #footer .footer-info {
   float: left;
   width: 240px;
@@ -1110,6 +1132,7 @@ header.boxshow {
 #footer .footer-info ul {
   display: inline-block;
   vertical-align: top;
+  white-space: nowrap;
 }
 
 @media (max-width: 768px) {
@@ -1138,12 +1161,13 @@ header.boxshow {
 }
 
 #footer .footer-info.info2 {
-  width: calc(100% - 240px);
-  float: left;
+  width: calc(100% - 275px);
+  float: right;
 }
 
 #footer .footer-info.info2 h6 {
   margin-bottom: 6px;
+  clear: both;
 }
 
 @media (max-width: 768px) {
@@ -1158,11 +1182,6 @@ header.boxshow {
 #footer .footer-info.info2 ul {
   width: 25%;
   float: left;
-  text-align: right;
-}
-
-#footer .footer-info.info2 ul > div {
-  display: inline-block;
 }
 
 @media (max-width: 768px) {

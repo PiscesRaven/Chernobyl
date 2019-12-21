@@ -22,8 +22,8 @@ function syncElement(obj1, obj2) {
 
 $(document).on('click', '.openNtc', e => {
   e.preventDefault(e)
-  $(DOM('.openNtc')).removeClass("active")
-  $('.openNtc + ul').children('div').slideUp()
+  $(DOM('#mb-info .openNtc')).removeClass("active")
+  $('#mb-info .openNtc + ul').children('div').slideUp()
   if ($(e.target).next('ul').children('div').is(':visible')) return
   $(e.target).next('ul').children('div').slideDown()
   $(e.target).toggleClass("active");
