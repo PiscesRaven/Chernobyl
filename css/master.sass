@@ -54,6 +54,7 @@ img
 h1 
   font-size: 450%
   line-height: 1.25
+  font-weight: 500
 
 h2
   font-size: 225%
@@ -61,8 +62,8 @@ h2
 
 h3 
   font-size: 150%
-  letter-spacing: 0
-  line-height: 1.5
+  letter-spacing: .25px
+  line-height: 1.67
   color: #29354C
   margin-bottom: 8px
   font-weight: 400
@@ -91,7 +92,7 @@ h4, h5
   max-width: 280px
   margin: auto
   font-size: 18px
-  font-weight: 700
+  font-weight: 500
   padding: 9px 0
   border-radius: 4px
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.15), 0 2px 4px 0 rgba(0, 0, 0, 0.05)
@@ -121,13 +122,14 @@ h4, h5
       left: -16px
       transform: translateY(-50%)
 
-.btn-primary
-  border-radius: 4px
+.btn-primary,a.btn-primary
   border: solid 1px #000
   box-shadow: none
   color: #29354c
+  padding: 8px 0
   &:hover
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.03)), #f5db52
+    box-shadow: none
   &.disabled
     color: #c0b47a
 
@@ -166,6 +168,7 @@ h4, h5
 .text-right 
   text-align: right
 
+
 .small 
   font-size: 90%
 
@@ -184,11 +187,11 @@ h4, h5
 .mx_1000
   max-width: 1000px
   margin: auto
-  padding: 0 40px
+  padding: 0 20px
   +pad-width 
-    padding: 0 20px
+    padding: 0 40px
   +phone-width 
-    padding: 0 15px
+    padding: 0 20px
 
 .mx_1920
   max-width: 1920px
@@ -197,21 +200,23 @@ h4, h5
 
 
 .logo
-  background: url(../img/logo.png) no-repeat center
+  background: url(../img/logo-white.png) no-repeat center
   width: 166px
   height: 100%
   display: block
   text-indent: -999999999999px
+  &.footer
+    background-image: url("../img/logo-black.png")
 
 .container
-  padding-bottom: 140px
+  padding-bottom: 120px
   +phone-width
-    padding-bottom: 40px
+    padding-bottom: 100px
   .section-title 
     color: #29354c
-    margin-bottom: 140px
+    margin-bottom: 120px
     +pad-width
-      margin-bottom: 60px
+      margin-bottom: 100px
     h1
       margin-bottom: 20px
       +pad-width
@@ -271,7 +276,7 @@ h4, h5
   +pc-width
     padding: 40px 60px
   +pad-width
-    padding: 40px
+    padding: 40px 17.5% 60px 17.5% 
   +phone-width
     padding: 20px
   
@@ -279,12 +284,12 @@ h4, h5
     display: inline-block
     vertical-align: top
     white-space: normal
-    +pc-width
+    +pad-width
       display: block
   .signUp-content
-    width: 63%
+    width: 64.5%
     padding-right: 7%
-    +pc-width
+    +pad-width
       width: 100%
       padding: 0
       margin-bottom: 20px
@@ -292,22 +297,76 @@ h4, h5
     +phone-width
       text-align: left
     p
-      +pc-width
+      +pad-width
         text-align: center
       +phone-width
         text-align: left
     h3
+      +pc-width
+        font-size: 2.5vmin
+      +pad-width
+        font-size: 24px
       +phone-width
         font-size: 16px
         font-weight: 700
   .btn-group
-    width: 30%
+    width: 36%
     margin: auto
-    +pc-width
+    +pad-width
       width: 100%
     .btn
       &:first-of-type
         margin-bottom: 16px
+
+/* drawer css */
+
+header
+  +size(100%,120px)
+  width: 100%
+  height: 120px
+  display: block
+  position: fixed
+  top: 0 
+  z-index: 1000
+  +pad-width
+    height: 80px
+  &.boxshow
+    background-color: #fff
+    box-shadow: 3px 3px 15px #c4c4c485
+
+
+.drawer
+  h1
+    margin-top: 36px
+    margin-bottom: 14px
+    width: 166px
+    height: 37px
+    font-size: 100%
+    +pad-width
+      margin-top: 24px
+  .mobile-title
+    position: absolute
+    z-index: 666
+    top: 0
+    left: 1.3rem
+    line-height: 82px
+    width: calc( 100vw - 68px )
+    background-color: #fff
+    opacity: 0
+  .drawer-menu-item
+    color: #fff
+  .boxshow
+    .logo
+      background-image: url("../img/logo-black.png")
+    .drawer-menu-item
+      color: #222
+  &.drawer-open
+    .logo 
+      display: none
+    .mobile-title
+      opacity: 1
+    .drawer-menu-item
+      color: #222
 
 /* main css */
 .main
@@ -324,7 +383,34 @@ h4, h5
     right: 0
     bottom: 0
     z-index: -2
-    
+
+/* banner css */
+.banner-container
+  position: relative
+  .banner
+    background-image: url(https://www.codingbar.ai/img/win_sh_camp_banner.jpg)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    overflow: hidden
+    height: 100vh
+  .banner-title
+    @extend %setCenter
+    white-space: nowrap
+    h3 
+      margin-bottom: 40px
+      +phone-width
+        font-size: 20px
+    +pad-width
+      h1 
+        font-size: 48px
+    +phone-width
+      h1 
+        font-size: 32px
+  .cover 
+    background-color: rgba(0, 0, 0, 0.45)  
+
+/* top-class-section css*/ 
 .top-class-section
   .afterBg
     &:after
@@ -350,6 +436,10 @@ h4, h5
       height: 100%
       border: 0
 
+/* course-section css */
+.course-section
+  .section-title
+    margin-bottom: 0px
 
 /* class_main css */
 .class-section
@@ -377,6 +467,8 @@ h4, h5
       margin-bottom: 100px
       &:last-of-type
         margin-bottom: 0px
+        +phone-width
+          margin-bottom: 60px
     .box_content
       display: inline-block
       width: 50%
@@ -387,7 +479,7 @@ h4, h5
         margin-bottom: 32px
       .title 
         font-size: 48px
-        font-weight: 700
+        font-weight: 500
         margin-bottom: 20px
         +pc-width
           font-size: 5vw
@@ -408,9 +500,16 @@ h4, h5
           min-height: auto
           padding: 24px
           line-height: 1.5
+          +phone-width 
+            padding: 16px 12px
       &.content
-        padding-left: 36px
-        padding-right: 10px
+        padding-left: 60px
+        white-space: nowrap
+        @media (max-width: 1200px)
+          white-space: normal
+          padding-left: 45px
+        +pad-width
+          padding-left: 20px
         +phone-width
           padding: 0
         .btn 
@@ -419,80 +518,6 @@ h4, h5
           +phone-width
             margin: auto
             margin-bottom: 16px
-
-
-/* drawer css */
-
-header
-  +size(100%,120px)
-  width: 100%
-  height: 120px
-  display: block
-  position: fixed
-  top: 0 
-  z-index: 1000
-  +pad-width
-    height: 80px
-  &.boxshow
-    background-color: #fff
-    box-shadow: 3px 3px 15px #c4c4c485
-
-.drawer
-  h1
-    margin-top: 36px
-    margin-bottom: 14px
-    width: 166px
-    height: 37px
-    font-size: 100%
-    +pad-width
-      margin-top: 24px
-  .mobile-title
-    position: absolute
-    z-index: 666
-    top: 0
-    left: 1.3rem
-    line-height: 82px
-    width: calc( 100vw - 68px )
-    background-color: #fff
-    opacity: 0
-  .drawer-menu-item
-    color: #fff
-  .boxshow
-    .drawer-menu-item
-      color: #222
-  &.drawer-open
-    .logo 
-      display: none
-    .mobile-title
-      opacity: 1
-    .drawer-menu-item
-      color: #222
-
-/* banner css */
-.banner-container
-  position: relative
-  .banner
-    background-image: url(https://www.codingbar.ai/img/win_sh_camp_banner.jpg)
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: cover
-    overflow: hidden
-    height: 100vh
-  .banner-title
-    @extend %setCenter
-    white-space: nowrap
-    h3 
-      margin-bottom: 40px
-      +phone-width
-        font-size: 20px
-    +pad-width
-      h1 
-        font-size: 48px
-    +phone-width
-      h1 
-        font-size: 32px
-  .cover 
-    background-color: rgba(0, 0, 0, 0.45)  
 
 /* provide-section css */  
 .provide-section
@@ -537,6 +562,7 @@ header
       width: 100%
     .title
       font-size: 48px
+      font-weight: 500
       +pad-width
         font-size: 36px
       +phone-width
@@ -556,24 +582,33 @@ header
       width: 100%
 
 .vendor-content
+  +phone-width
+    text-align: center
   img
     display: inline-block
     width: calc(100% / 6 - 20px)
     +pc-width
       width: calc(100% / 4 - 20px)
     +phone-width
-      width: 49%
+      width: calc(100% / 2 - 10px)
     
  
 /* date_main css */
 .date_main 
   text-align: center
   margin-bottom: 24px
+  white-space: nowrap
+  + .section-title
+    margin-bottom: 120px
   ul.time_list
     width: calc(100% / 2 - 120px)
     display: inline-block
     margin-right: 64px
+    white-space: nowrap
     +pad-width
+      width: 50%
+      margin-right: 20px
+    +phone-width
       width: 100%
       display: block
     &:last-of-type
@@ -592,7 +627,6 @@ header
         position: absolute
         top: 0 
         right: -6px
-
 .qa-content
   +AutoSize(80%)
   margin-bottom: 32px
@@ -602,7 +636,6 @@ header
     padding: 10px 0
     border-bottom: solid 1px #d4d6d9
   p 
-    
     margin-bottom: 8px
   div.text-black
     padding-top: 10px 
@@ -621,6 +654,12 @@ header
     font-size: 20px
     +phone-width
       font-size: 16px
+  .note-qa
+    margin-bottom: 32px
+    .ques
+      cursor: pointer
+    .ans
+      display: none
     
 
 /* footer css */
@@ -629,15 +668,34 @@ header
   padding-bottom: 100px
   color: #29354c
   +pad-width
-    padding-top: 0px
+    padding-top: 40px
+  +phone-width
     padding-bottom: 40px
   .logo 
     padding-top: 60px
     margin-bottom: 16px
     +pad-width 
-       margin-bottom: 0px
+       margin-bottom: 10px
   .footer-info
     float: left
+    ul
+      display: inline-block
+      vertical-align: top
+      +pad-width
+        display: block
+        margin-left: 0
+        &:first-of-type
+          border-bottom: none
+      > div 
+        +pad-width
+          display: none
+          padding-bottom: 10px
+      li
+        h6
+          +pad-width
+            font-size: 12px
+            display: block
+            margin-bottom: 16px
     &.info2
       text-align: right
       width: 679px
@@ -645,41 +703,27 @@ header
       h6
         margin-bottom: 6px
       p 
-        margin-bottom: 7px
-      +pc-width
+      +pad-width
         text-align: left
         width: 100%
         padding-top: 16px
         padding-left: 0
       ul
         width: 24%
-        +pc-width
+        li
+          h6
+            +pad-width
+              display: none
+        +pad-width
           width: 100%
           border-bottom: 1px solid #000
-  ul
-    display: inline-block
-    vertical-align: top
-    +pad-width
-      display: block
-      margin-left: 0
-      
-      &:first-of-type
-        border-bottom: none
-    > div 
-      +pc-width
-        display: none
-        padding-bottom: 10px
-    li
-      h6
-        +pc-width
-          display: none
-  
   .openNtc
     display: none
-    +pc-width
+    +pad-width
       display: block
       position: relative
       padding: 8px 0
+      font-size: 14px
       &:after 
         content: ''
         +size(20px)

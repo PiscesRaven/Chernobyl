@@ -16,6 +16,10 @@ function DOM(e) {
   return result;
 }
 
+function syncElement(obj1, obj2) {
+  $(DOM(obj2)).html($(DOM(obj1)).html());
+}
+
 $(document).on('click', '.openNtc', e => {
   e.preventDefault(e)
   $(DOM('.openNtc')).removeClass("active")
@@ -26,3 +30,19 @@ $(document).on('click', '.openNtc', e => {
 
 
 })
+
+
+$(document).on('click', '.ques', e => {
+
+  e.preventDefault(e)
+  // 兩行寫法
+  $(e.target).toggleClass('active').siblings('.ans').slideToggle();
+  $(e.target).parent().siblings().find('.ques').removeClass('active').siblings('.ans').slideUp();
+})
+
+syncElement("#pc-info", "#mb-info")
+syncElement("#provide1", "#provide2")
+syncElement("#provide4", "#provide4")
+
+
+// window.isMobileDevice = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1)
