@@ -1,17 +1,16 @@
 @import './mixins.sass'
-
 *
   box-sizing: border-box
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td,span
   margin: 0
   padding: 0
-  font-family: 'pingfang TC', 'Microsoft JhengHei', 'Arial Black', 'LiHei Pro'
+  font-family: 'Noto Sans TC', 'montserrat', 'Microsoft JhengHei', 'Arial Black', 'LiHei Pro'
 
 body
   margin: 0
   padding: 0
-  font-family: 'pingfang TC', 'Microsoft JhengHei', 'Arial Black', 'LiHei Pro'
+  font-family: 'Noto Sans TC', 'montserrat', 'Microsoft JhengHei', 'Arial Black', 'LiHei Pro'
   letter-spacing: 1px
   position: relative
   background-color: #fff
@@ -618,18 +617,6 @@ header
         position: absolute
         top: 0
         right: -6px
-.qa-content
-  +AutoSize(80%)
-  margin-bottom: 32px
-  +pad-width
-    width: 100%
-  h6
-    padding: 10px 0
-    border-bottom: solid 1px #d4d6d9
-  p
-    margin-bottom: 8px
-  div.text-black
-    padding-top: 10px
 
 /* note-section css */
 .note-section
@@ -645,8 +632,20 @@ header
     font-size: 20px
     +phone-width
       font-size: 16px
-  .note-qa
+  .qa-content
+    +AutoSize(80%)
     margin-bottom: 32px
+    +pad-width
+      width: 100%
+    h6
+      padding: 10px 0
+      
+    p
+      margin-bottom: 8px
+    div.text-black
+      padding-top: 10px
+  .note-qa
+    border-bottom: solid 1px #d4d6d9
     .ques
       cursor: pointer
     .ans
@@ -657,10 +656,6 @@ header
   padding-top: 60px
   padding-bottom: 100px
   color: #29354c
-  +pad-width
-    padding-top: 40px
-  +phone-width
-    padding-bottom: 40px
   .logo
     padding-top: 60px
     margin-bottom: 16px
@@ -671,6 +666,8 @@ header
       display: none!important
   #mb-info
     display: none!important
+    li
+      cursor: pointer
     +pad-width
       display: block!important
   .footer-info
