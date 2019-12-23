@@ -194,13 +194,13 @@
 
 .drawer-hamburger-icon:after {
   top: -20px;
-  width: 90%;
+  width: 100%;
   left: auto;
   right: 0;
 }
 
 .drawer-hamburger-icon:before {
-  width: 70%;
+  width: 100%;
   left: auto;
   right: 0;
 }
