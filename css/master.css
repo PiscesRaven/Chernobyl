@@ -519,6 +519,18 @@ header.boxshow {
           box-shadow: 3px 3px 15px #c4c4c485;
 }
 
+header.boxshow .drawer-hamburger-icon {
+  background-color: #000;
+}
+
+header.boxshow .drawer-hamburger-icon:before {
+  background-color: #000;
+}
+
+header.boxshow .drawer-hamburger-icon:after {
+  background-color: #000;
+}
+
 .drawer h1 {
   margin-top: 36px;
   margin-bottom: 14px;
@@ -1221,3 +1233,4 @@ header.boxshow {
   -webkit-transform: translateY(-50%) rotate(180deg);
           transform: translateY(-50%) rotate(180deg);
 }
+/*# sourceMappingURL=master.css.map */
