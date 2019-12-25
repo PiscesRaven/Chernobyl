@@ -609,7 +609,7 @@ header.boxshow .drawer-hamburger-icon:after {
 }
 
 .banner-container .banner {
-  background-image: url(https://www.codingbar.ai/img/win_sh_camp_banner.jpg);
+  background-image: url("../img/camp_banner.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
